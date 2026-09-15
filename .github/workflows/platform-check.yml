@@ -1,0 +1,35 @@
+name: Native platform checks
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release to download (a draft is supported)
+        required: true
+        default: v0.1.0
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Test clean source and released executable
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          PYTHONUTF8: "1"
+          PYTHONUNBUFFERED: "1"
+        run: python tests/verify_platform.py
