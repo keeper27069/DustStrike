@@ -1,0 +1,17 @@
+DustStrike operator models (operator_ct.glb and operator_t.glb)
+
+Anatomical base: Body Male - Realistic, by Dan Ulrich.
+Source: Blender Studio / Blender community Human Base Meshes v1.4.1.
+License: CC0 1.0 Universal / Public Domain.
+The source bundle's embedded README states:
+"All provided assets are public domain under the CC0 license."
+
+Official page: https://www.blender.org/download/demo-files/
+Source download: https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip
+License text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Changes for DustStrike: anatomical rescaling, clothing and equipment,
+procedural fabric textures, complexion vertex colors, skeleton skinning,
+rifle poses, six animation clips, material batching and glTF export.
+Editable sources are included in source_art/operator_ct.blend and
+source_art/operator_t.blend; generation script: source_art/build_operators.py.
