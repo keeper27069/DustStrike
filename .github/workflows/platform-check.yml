@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: Release to download (a draft is supported)
+        description: Published release to download
         required: true
         default: v0.1.0
         type: string

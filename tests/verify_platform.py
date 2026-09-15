@@ -1,7 +1,7 @@
 """Check editor regressions and a matching released native build on Windows/Linux.
 
 Run with RELEASE_TAG=v0.1.0, GITHUB_REPOSITORY=owner/repo and GH_TOKEN set.
-The release may be a draft visible to that token. Uses Python's standard library
+The release must be published for the workflow's read-only token. Uses Python's standard library
 and GitHub CLI; no engine or export templates need to be preinstalled.
 """
 
